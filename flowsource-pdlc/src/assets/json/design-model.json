@@ -1,0 +1,48 @@
+{
+  "botname": "",
+  "botTag": {
+    "status": "New",
+    "tooltipText": "Integrated streaming capabilities, session maintenance and memory management for efficiency."
+  },
+  "initialDisabled": false,
+  "showUploadFile": null,
+  "attachmentOption": {
+    "accept": "image/png, image/jpg, image/jpeg, image/gif, image/webp",
+    "minFiles": 1,
+    "maxFiles": 5,
+    "fileSize": 1
+  },
+  "citationType": "default",
+  "botMessage": null,
+  "faqTitle": null,
+  "initialQuestions": [
+    "Can you provide KB articles that cover error handling and error codes for online banking platforms?",
+    "Could you provide the post-deployment CI/CD checklist specific to XX Bank?",
+    "Can you connect me with the database administrator?",
+    "Summarize the product roadmap for upcoming quarters in iPYMT in tabular format.",
+    "What is the maximum liability for a consumer if they notify the financial institution within two business days after learning of the loss or theft of their access device?",
+    "If a consumer notifies the financial institution more than two business days after learning of the loss or theft of their access device, but within 60 calendar days after the transmittal of the statement showing the first unauthorized transfer, what is their maximum liability?",
+    "How is the consumer's liability calculated if they notify the financial institution more than 60 calendar days after the transmittal of the statement showing the first unauthorized transfer made with the access device?",
+    "Create an epic with user story on funds transfer over person to person, where the current mode of transfer is using mobile number in Zelle application. New requirement is to add a new field - Implement Email Address as Additional Mode of Transfer in iPYMT. User story must have title, description and acceptance.",
+    "Please perform quality check for the above user story",
+    "Please create a test case for the above user story",
+    "Please create a test script using Java Selenium for the above test case",
+    "We're enhancing our person-to-person funds transfer application, which currently uses mobile numbers via Zelle. The new requirement is to implement email addresses as an additional mode of transfer in our iPYMT system. Can you help design a scalable and secure system architecture to support this new feature? Please focus on any necessary changes to the existing components.",
+    "Please perform a quality check on the proposed architecture and identify any potential issues or improvements, especially regarding security and scalability.",
+    "Could you assist me in creating UML diagrams, such as class diagrams and sequence diagrams, for the main components involved in adding the email address functionality?",
+    "Based on the design specifications for adding email addresses as an additional mode of transfer in our iPYMT system, can you generate code snippets or templates to implement this feature? We're using Java and Spring Boot for our backend services.",
+    "Please include boilerplate code for input validation and updating the existing transfer modules. Ensure the code follows best practices for performance and readability.",
+    "Can you suggest optimizations to improve the code's performance and maintainability?",
+    "We need to create documentation for the new feature that allows users to transfer funds using email addresses in our iPYMT system. Can you help draft clear and comprehensive API documentation, including endpoint descriptions, request/response formats, and authentication details?",
+    "Please assist in writing a user guide that explains how to use the new email transfer feature, highlighting any changes in the user interface and providing step-by-step instructions.",
+    "Ensure the documentation adheres to our company's standards and is easy to understand for both technical and non-technical users. Please suggest any improvements for clarity and effectiveness."
+  ],
+  "botAPI": {
+    "isSession": false,
+    "isStreaming": false,
+    "containsSource": false
+  },
+  "helpContent": "Cognizant Flowsource Agent is an invaluable tool designed to enhance your product development lifecycle process.  With its knowledge base, this chatbot is equipped to generate user stories, a crucial component in Agile project management, allowing you to effectively capture user requirements and prioritize development tasks.  Additionally, it enables you to create comprehensive test cases, ensuring that your product is thoroughly tested for quality and functionality.  By generating test scripts, this bot streamlines the testing process, saving you time and effort.",
+  "description": "Enhance your productivity through automated user story generation, test case creation, code generation and validation, documentation support, architecture review, knowledge article assistance and much more, improving efficiency and quality throughout the development lifecycle.",
+  "warningContent": ""
+}

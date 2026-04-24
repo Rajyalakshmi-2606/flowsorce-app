@@ -1,0 +1,114 @@
+.menu-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.chat_input_group {
+  background-color: white;
+}
+
+.chat_input_box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 3rem 1rem 3rem;
+  border: 1px solid #469bfc;
+  box-shadow: 0px 0px 17px 0px #00000033;
+  background: transparent;
+  z-index: 10;
+}
+
+.chat_input_box button {
+  color: #000000;
+  background-color: white;
+}
+.chat_input_box textarea {
+  min-height: 48px;
+  height: 48px;
+  max-height: 150px;
+  padding-right: 6px !important;
+  border: none;
+  box-shadow: none !important;
+}
+
+.session-history {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 70dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.session-history li {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 8px;
+  cursor: pointer;
+}
+.session-history li:hover {
+  background-color: #e9ecef;
+}
+.session-history .session-time {
+  color: #585b8d;
+  font-size: 12px;
+}
+.input-icons {
+  margin-bottom: 0.5rem;
+}
+.input-button {
+  padding: 0 1rem;
+  outline: none;
+  border: none;
+}
+.prompt-history-header {
+  background-color: white;
+  color: #00164d;
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+.close-popup {
+  margin: -0.8rem -0.8rem;
+}
+.prompt-history {
+  box-shadow: 0px 0px 17px 0px #7a797938;
+  bottom: -1rem !important;
+  min-width: 400px;
+}
+.image-preview {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.img-close {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+}
+.img-close svg {
+  height: 10px;
+  width: 7px;
+}
+.enlarged-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 360px;
+}
+.model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.modal {
+  display: flex;
+  width: 440px;
+  margin-left: 480px;
+  margin-top: 120px;
+}

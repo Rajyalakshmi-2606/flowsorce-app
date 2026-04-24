@@ -1,0 +1,440 @@
+/* Generate Font Face for Gellix for all weights */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Gellix", sans-serif !important;
+}
+
+/* Generate a navbar class with position relative and high z-index and background with 010040 color code in no repeat mode */
+.navbar {
+  position: relative;
+  z-index: 99;
+  /* background: #010040 0% 0% no-repeat padding-box; */
+  background: #18347b 0% 0% no-repeat padding-box;
+}
+
+/* Create a custom container class margin of 30px in left and right sides with important */
+.container-custom {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.container-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container-custom .chat-container {
+  height: 100%;
+}
+
+.header_app_name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: "Gellix", sans-serif;
+}
+
+.home-banner-card {
+  background: linear-gradient(141.11deg, #11215e 47.37%, #3d559d 76.21%);
+}
+
+.home-banner-card .card-title {
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.btn-custom,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:focus {
+  background: #71ebe8 !important;
+  color: #010040 !important;
+}
+
+/* Create Custom Button with grey foreground and black background. enable focus and hover attributes */
+.btn-custom-grey,
+.btn-custom-grey:hover,
+.btn-custom-grey:active,
+.btn-custom-grey:focus {
+  background: #010040 !important;
+  color: #71ebe8 !important;
+}
+
+/* Create a class for font size 20px */
+.font-size-20 {
+  font-size: 20px;
+}
+
+.home_banner_right_img_btn {
+  right: 12% !important;
+  bottom: 12% !important;
+}
+
+.custom-text {
+  color: #001d73;
+}
+
+.home_table_title {
+  font-weight: 500 !important;
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 1.6rem !important;
+  margin-top: 1rem !important;
+  color: #00164d !important;
+  padding-left: 0 !important;
+}
+
+.home_table_title_2 {
+  display: inline-block;
+  color: #093888 !important;
+}
+
+.home_table_title:before {
+  content: "";
+  position: absolute;
+  width: 73.5px;
+  height: 1px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 3px solid #4864bc;
+  border-radius: 3px;
+}
+
+.modal {
+  color: #093888;
+}
+
+.modal input,
+.modal input:active,
+.modal input:focus {
+  background: transparent;
+  border: solid 1px #363d94;
+}
+
+.modal_title {
+  position: relative;
+  color: #093888;
+  padding-bottom: 10px;
+}
+
+.create_modal .modal_title::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 1px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 5px solid #9fa8da;
+  border-radius: 5px;
+}
+
+.edit_modal .modal_title::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 1px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 5px solid #a5d7e2;
+  border-radius: 5px;
+}
+
+.create_modal_body .btn-primary,
+.create_modal_body .btn-primary:hover,
+.create_modal_body .btn-primary:active {
+  background: linear-gradient(0deg, #b7bdff, #b7bdff);
+  color: #363d94;
+  border: 1px solid #363d94;
+}
+
+.create_modal_body .btn-outline-primary,
+.create_modal_body .btn-outline-primary:hover,
+.create_modal_body .btn-outline-primary:active {
+  color: #363d94;
+  border: 1px solid #363d94;
+  background: linear-gradient(0deg, #dbdeff, #dbdeff);
+}
+
+.edit_modal_body {
+  color: #093888;
+  background: #dff9ff;
+}
+
+.edit_modal_body .btn-primary,
+.edit_modal_body .btn-primary:hover,
+.edit_modal_body .btn-primary:active {
+  background: linear-gradient(0deg, #a5d7e2, #a5d7e2);
+  color: #363d94;
+  border: 1px solid #363d94;
+}
+
+.edit_modal_body .btn-outline-primary,
+.edit_modal_body .btn-outline-primary:hover,
+.edit_modal_body .btn-outline-primary:active {
+  color: #363d94;
+  border: 1px solid #363d94;
+  background: linear-gradient(0deg, #dff9ff, #dff9ff);
+}
+
+.table-custom {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.table-custom thead th {
+  background: #5b80cc;
+  color: #fff;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.table-custom thead th:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+.table-custom thead th:nth-last-child(1) {
+  border-top-right-radius: 10px;
+}
+
+.table-custom tbody tr {
+  box-shadow: 0px 1px 4px 0px #0000003b;
+}
+
+.table-custom tbody td {
+  background: #dbdeff;
+  color: #050e29;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.citation {
+  position: absolute;
+  width: 30%;
+  right: -110%;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* transition: all 0.5s; */
+  background-color: white;
+  box-shadow: 0px 4px 11px 0px #00000040;
+}
+
+.citation.open {
+  right: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.close-icon-div {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  z-index: 1;
+  padding: 0.5rem;
+  background-color: inherit;
+}
+.close-icon-div svg {
+  border-radius: 50%;
+  padding: 4px 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+
+.logo-img {
+  width: 150px;
+}
+
+.disabled-content {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.float-right {
+  float: right;
+}
+
+.admin_action_icon {
+  color: #093888;
+}
+
+/*Login*/
+.create_login_modal_body {
+  color: #093888;
+  background: white;
+}
+
+.create_login_modal_body .btn-primary,
+.create_login_modal_body .btn-primary:hover,
+.create_login_modal_body .btn-primary:active {
+  /* background: linear-gradient(0deg, #b7bdff, #b7bdff); */
+  color: white;
+  /* border: 1px solid #363d94; */
+  border-color: #0067b8;
+  background-color: #0067b8;
+  border-radius: 0px;
+  width: 100px;
+  margin-left: 1rem;
+}
+
+.create_login_modal_body .btn-outline-primary,
+.create_login_modal_body .btn-outline-primary:hover,
+.create_login_modal_body .btn-outline-primary:active {
+  color: white;
+  /* border: 1px solid #363d94;
+  background: linear-gradient(0deg, #dbdeff, #dbdeff); */
+  border-color: darkgrey;
+  border-radius: 0px;
+  background: darkgrey;
+  width: 100px;
+}
+
+.end_loginform {
+  margin-left: 1rem;
+}
+
+/*Login Ends*/
+
+#global-nav .modelcard-img {
+  margin-top: 5px;
+}
+#global-nav .help-img {
+  transform: scale(1.25);
+}
+
+/* Global buttons designs */
+.chat_user_button {
+  color: white;
+  float: right;
+  border: none;
+  outline: none;
+  padding: 0.3rem 2rem;
+  min-width: 4rem;
+  margin: 0 !important;
+}
+.chat_user_button.save,
+.chat_user_button.add {
+  background-color: #6484ea;
+  border-radius: 2px;
+}
+.chat_user_button.cancel {
+  background-color: white;
+  color: #808080;
+}
+.action_form_buttons {
+  margin-top: 1rem;
+}
+.citation_heading {
+  font-weight: 400;
+  font-size: 23px;
+  margin-bottom: 1.5rem;
+}
+
+.group-mgmt__indicator-separator {
+  background: none !important;
+}
+
+.group-mgmt__option {
+  background: red;
+}
+
+#observability-date .rdrDayNumber {
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  position: absolute;
+}
+#observability-date .rdrMonthName {
+  font-weight: 600;
+  font-size: 12px;
+}
+#observability-date .rdrWeekDay {
+  font-weight: 600;
+  font-size: 14px;
+}
+#observability-date .rdrMonthAndYearWrapper {
+  height: 40px;
+}
+#observability-date .rdrMonths .rdrMonth {
+  padding-bottom: 0.6rem;
+}
+
+#username::-webkit-outer-spin-button,
+#username::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+[data-width="0"] div[role="content-footer"] {
+  /* display: none !important ; */
+  visibility: hidden;
+  z-index: -1;
+}
+
+.content-min-width {
+  min-width: 250px;
+}
+
+.help-popover {
+  max-width: 350px;
+}
+
+.logo {
+  top: 45.64px;
+  left: 60px;
+  height: 46px;
+  width: auto;
+}
+
+.client-logo {
+  height: 30px;
+}
+
+#client-logo.vertical-line {
+  border-left: 2px solid #2063a7;
+  margin-top: 12px;
+  height: 20px;
+  margin-left: 16px;
+}
+#logout {
+  float: right;
+  color: white;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+}
+
+#imageModal {
+  display: flex;
+  justify-content: center;
+}
+
+#imageModal .modal-content {
+  height: -webkit-fill-available;
+  width: auto;
+}
+
+.last-login {
+  position: absolute;
+  right: 24px;
+  bottom: 2px;
+  color: white;
+  font-size: 12px;
+}
+.last-login span {
+  font-weight: 600;
+}

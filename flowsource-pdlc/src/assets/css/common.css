@@ -1,0 +1,113 @@
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.custom-link {
+  color: #00164d;
+  font-weight: 500;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.container-padding {
+  padding: 2rem;
+}
+.table-theme-blue,
+.font-size-14 {
+  font-size: 14px;
+}
+.table-theme-blue:hover > tbody > tr:hover > * {
+  --bs-table-color-state: var(--bs-table-hover-color);
+  --bs-table-bg-state: var(--bs-table-hover-bg);
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: #fff !important;
+}
+
+.table-theme-blue > tbody > tr:nth-of-type(even) > * {
+  --bs-table-color-type: var(--bs-table-striped-color);
+  --bs-table-bg-type: #dbe4ff !important;
+}
+.table-theme-blue th {
+  background-color: #6d87db !important;
+  color: #fff !important;
+}
+/* .table-theme-blue.table-hover > tbody > tr:hover > * {
+  --bs-table-hover-bg: #dbe4ff;
+} */
+.table-theme-blue th,
+.table-theme-blue td {
+  vertical-align: middle;
+}
+.home-img {
+  background-image: url("/images/navigation/home.svg");
+}
+.dashboard-img {
+  background-image: url("/images/navigation/dashboard.svg");
+}
+.modelcard-img {
+  background-image: url("/images/navigation/modelcard.svg");
+}
+.accelerators-img {
+  background-image: url("/images/navigation/tools.svg");
+}
+.admin-img {
+  background-image: url("/images/navigation/admin.svg");
+}
+.modeladmin-img {
+  background-image: url("/images/navigation/modeladmin.svg");
+}
+.help-img {
+  background-image: url("/images/navigation/help.svg");
+}
+.chat-img {
+  background-image: url("/images/navigation/chat.svg");
+}
+
+.banner1-img {
+  background: url("/images/landingPage/bannerImage1.png");
+}
+.banner2-img {
+  background: url("/images/landingPage/bannerImage2.png");
+}
+.banner3-img {
+  background: url("/images/landingPage/bannerImage3.png");
+}
+
+.chat_message .feedback {
+  transition: all 0.5s ease-in-out;
+  height: 0;
+  overflow-y: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+#chat_messages
+  > .chat_message_wrapper:nth-last-child(2)
+  .chat_message
+  .feedback,
+.chat_message:hover .feedback {
+  visibility: visible !important;
+  height: unset !important;
+  opacity: 1 !important;
+}
+
+.absolute-container {
+  position: absolute;
+  inset: 0;
+}
+
+.white-space-pre-line {
+  white-space: pre-line;
+}
+
+.logo {
+  top: 45.64px;
+  left: 60px;
+  height: 46px;
+  width: auto;
+}
+
+.dialog-min-width {
+  min-width: 300px;
+}

@@ -1,0 +1,141 @@
+.chat_icon {
+  opacity: 0.8;
+}
+.chat_icon:hover {
+  opacity: 100;
+}
+
+.chat-user-input {
+  border: none;
+  border-bottom: 1px solid #51b2ff;
+  outline: none;
+  margin: 0.5rem;
+  min-width: 20rem;
+}
+
+.edit-user-option {
+  margin-top: 1rem;
+}
+.chat_user_button {
+  color: white;
+  float: right;
+  border: none;
+  outline: none;
+  padding: 0.3rem 2rem;
+  min-width: 4rem;
+  margin: 0 !important;
+}
+.chat_user_button.save {
+  background-color: #6484ea;
+  border-radius: 2px;
+}
+.chat_user_button.cancel {
+  background-color: white;
+  color: #808080;
+}
+.cancel:hover {
+  border: 1px solid #6484ea;
+  border-radius: 2px;
+  right: 3px;
+  position: relative;
+}
+
+.chat_user_option_wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+.chat_user_icon {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.chat_user_hover_area {
+  display: block;
+}
+.chat_user_option_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 4px;
+}
+.chat_user_hover_area:hover .chat_user_icon,
+.chat_user_option_wrapper:hover .chat_user_icon {
+  opacity: 1;
+}
+
+.source-button {
+  padding: 0 !important;
+  margin-top: -12px;
+}
+
+.source-button::after {
+  content: ",";
+  color: black;
+  font-size: 20px;
+}
+
+.source-button:last-child::after {
+  content: "";
+}
+.chat-icon {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.chat-icon:hover,
+.popover-visible .chat-icon {
+  opacity: 0.7; /* Optional: change opacity on hover or when popover is visible */
+}
+
+.chat-icon:hover {
+  opacity: 100;
+}
+.feedback-popover {
+  max-width: 1000px;
+  width: 580px;
+  white-space: nowrap;
+  position: absolute !important;
+}
+.outlineclose {
+  cursor: pointer;
+}
+.feedbackoptions {
+  margin-bottom: 8px;
+}
+.feedback-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+.form-control-cs {
+  font-size: 12px;
+}
+.description {
+  font-size: 14px;
+}
+.popover-body {
+  font-weight: bold;
+}
+.infocircle {
+  padding-left: 45%;
+}
+.conversation-image {
+  height: 50px;
+  width: 50px;
+  padding-right: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.large-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
