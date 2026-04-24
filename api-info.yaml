@@ -1,0 +1,225 @@
+openapi: '3.0.0'
+info:
+  version: '4.3.1'
+  title: Documentation-backstage
+  description: |-
+    This is a sample backstage APIs specification.
+tags:
+  - name: Online-Payment-App
+    description: Everything about backstage Interface
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+servers:
+  - url: http://flowsourc-demo.cognizantgoc.com
+paths:
+  /bsplugin/api/v3/bsplugin/initialize:
+    post:
+      summary: Initialize App-API-GitHub
+      tags:
+        - Online-Payment-App
+      description: "This API will be called when the bot is initialized. This will validate the iva token and authorize user to access ASKiVA."
+      requestBody:
+        content:
+          application/json:
+            example:
+              source: Iva
+              language: ['en','English']
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                ivaResponseTag: type_say,
+                ivaResponse: "Hi John, I am AskIva, How may I help you?"
+                username: John
+                convid: aexd1243242defg
+                email: "xxx.cognizant.com"
+  /bsplugin/api/v3/bsplugin/receive:
+    post:
+      summary: ASKiVA UI will send user input to message interface through http call and all response to user will be published to echoserver.
+      tags:
+        - Online-Payment-App
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userinput:
+                  type: string
+                  description: User input
+                attachment:
+                  type: boolean
+                  description: Boolean value indicating if there is an attachment
+                userid:
+                  type: string
+                  format: email
+                  description: Email id of the user
+                username:
+                  type: string
+                  description: Name of the user
+                channel:
+                  type: string
+                  description: Channel name
+                convid:
+                  type: string
+                  description: Conversation id for the user session
+                language:
+                  type: array
+                  items:
+                    type: string
+                  description: Language preferences
+              required:
+                - userinput
+                - attachment
+                - userid
+                - username
+                - channel
+                - convid
+                - language
+      responses:
+        '200':
+          description: Response will be published by broadcast server.
+  /bsplugin/api/v3/sgsd/receive:
+    post:
+      summary: "Receive Intent / Entity extraction and confidence"
+      tags:
+        - bsplugin
+      description: "Message interface will return the Intent / Entity extraction and confidence for any given utterance and language."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userinput:
+                  type: string
+                  description: "User input text"
+                language:
+                  type: array
+                  items:
+                    type: string
+                  description: "Language(s) for processing"
+      responses:
+        '200':
+          description: "Successful response"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ivaResponse:
+                    type: object
+                    properties:
+                      Message:
+                        type: object
+                        properties:
+                          entities:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                confidence:
+                                  type: number
+                                end:
+                                  type: integer
+                                entity:
+                                  type: string
+                                extractor:
+                                  type: string
+                                start:
+                                  type: integer
+                                value:
+                                  type: string
+                          intent:
+                            type: object
+                            properties:
+                              confidence:
+                                type: number
+                              name:
+                                type: string
+                          intent_ranking:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                confidence:
+                                  type: number
+                                name:
+                                  type: string
+                          model:
+                            type: string
+                          project:
+                            type: string
+                          text:
+                            type: string
+                        required:
+                          - entities
+                          - intent
+                          - intent_ranking
+                          - model
+                          - project
+                          - text
+                      Status:
+                        type: string
+                        enum:
+                          - "Success"
+  /bsplugin/api/v3/bsplugin/actionpostback:
+    post:
+      summary: "Publish execution output to message interface"
+      tags:
+        - App-API-GitHub
+      description: "After server action is executed, IVA API will call the postback endpoint to publish the execution output to the message interface."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Status:
+                  type: string
+                  description: "Status of the execution (e.g., 'Success')"
+                Message:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      action_type:
+                        type: string
+                      action_value:
+                        type: object
+                      option_type:
+                        type: integer
+                      freetext:
+                        type: boolean
+                      slot:
+                        type: string
+                      language:
+                        type: string
+                      index:
+                        type: integer
+                      expectinput:
+                        type: boolean
+                      conversationid:
+                        type: string
+                      title:
+                        type: string
+      responses:
+        '200':
+          description: "Successful response"
+          content:
+            application/json:
+              example:
+                status: 'Success'
+                message: 'Posted to AskIVA Controller'
+
+security:
+      - bearerAuth: []
+components:
+      securitySchemes:
+        bearerAuth:
+          type: http
+          scheme: bearer
