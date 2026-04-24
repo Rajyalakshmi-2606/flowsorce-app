@@ -1,0 +1,165 @@
+/* client.tsx Styles Start */
+
+.chat_container {
+  height: 100%;
+}
+
+.chat_left {
+  position: relative;
+  background: white;
+  width: 20%;
+}
+.chat_right {
+  background: white;
+  position: relative;
+  width: 80%;
+}
+.chat_right_container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/images/Chat_Bg1.png");
+  background-size: cover;
+  padding-bottom: 90px;
+}
+
+.chat-modal-faq-open,
+.chat-modal-source-open {
+  padding-left: 16px;
+}
+.chat-modal-source-open {
+  width: 25%;
+}
+.chat-modal-faq-open {
+  width: 40%;
+}
+/* client.tsx Styles End */
+
+.toggle-history .icon {
+  position: absolute;
+  height: 32px;
+  width: auto;
+  padding: 3px 8px 0 6px;
+  cursor: pointer;
+}
+
+.open-space {
+  border-radius: 0 0.3rem 0.3rem 0;
+  width: 21px;
+  height: 1.5rem;
+  position: relative;
+  top: 1rem;
+  background: #4864bc;
+}
+.open-space .icon {
+  height: 17px !important;
+  color: white;
+}
+.enlarged-image {
+  height: -webkit-fill-available;
+  max-height: 84vh !important;
+  width: auto !important;
+  min-height: 100px;
+  max-width: 90vw;
+}
+.model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.modal {
+  display: flex;
+  width: 440px;
+  margin-left: 480px;
+  margin-top: 120px;
+}
+.container-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 100vh;
+  z-index: 1201;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: auto;
+  visibility: hidden;
+}
+
+.container-content.show {
+  visibility: visible;
+}
+
+.citation.open {
+  position: fixed;
+  top: var(--header-height, 64px);
+  right: 0;
+  width: 40vw;
+  height: calc(100vh - var(--header-height, 64px));
+  z-index: 1201;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .citation.open {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .citation.open {
+    width: 100vw;
+    left: 0;
+    border-radius: 0;
+  }
+}
+
+.closeIconDiv {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.citationClose {
+  position: sticky;
+  top: 0;
+  right: 20px;
+  left: auto;
+  margin: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  background: white;
+  min-height: 48px;
+  align-items: center;
+}
+
+.citationClose svg {
+  border-radius: 50%;
+  padding: 4px 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
