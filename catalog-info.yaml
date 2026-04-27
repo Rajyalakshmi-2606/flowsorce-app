@@ -44,36 +44,35 @@ spec:
   system: flowsource-demo
   owner: group:default-group
   lifecycle: Development
-#   dependsOn:
-#     - component:default/Payment-App-Gateway-System
-#     - resource:default/Payment-App-User-Database1
-#   providesApis:
-#     - Payment-App-Gateway-System
-# ---
-# apiVersion: backstage.io/v1alpha1
-# kind: Resource
-# metadata:
-#   name: Payment-App-User-Database1
-#   description: Database for storing the details
-#   annotations:
-#     backstage.io/techdocs-ref: dir:.
-# spec:
-#   type: database
-#   owner: group:default-group
-#   system: flowsource-demo
-# ---
-# apiVersion: backstage.io/v1alpha1
-# kind: API
-# metadata:
-#   name: Payment-App-Gateway-System
-#   description: The repository contains the BSPlugins integrating the diffrent channels (Web, Skype for business, Cortana, WebEx Teams, MS Teams*, Twilio* & Custom Channels) into HiveCenter Chatops Engine. The interface provides single endpoint for tapping into the features offered part of the I&O automation platform.
-#   tags:
-#     - node
-# spec:
-#   type: openapi
-#   lifecycle: Development
-#   owner: group:default-group
-#   system: flowsource-demo
-#   definition:
-
-#     $text: './api-info.yaml'
+  dependsOn:
+    - component:default/Payment-App-Gateway-System
+    - resource:default/Payment-App-User-Database1
+  providesApis:
+    - Payment-App-Gateway-System
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: Payment-App-User-Database1
+  description: Database for storing the details
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: database
+  owner: group:default-group
+  system: flowsource-demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Payment-App-Gateway-System
+  description: The repository contains the BSPlugins integrating the diffrent channels (Web, Skype for business, Cortana, WebEx Teams, MS Teams*, Twilio* & Custom Channels) into HiveCenter Chatops Engine. The interface provides single endpoint for tapping into the features offered part of the I&O automation platform.
+  tags:
+    - node
+spec:
+  type: openapi
+  lifecycle: Development
+  owner: group:default-group
+  system: flowsource-demo
+  definition:
+    $text: './api-info.yaml'
