@@ -12,18 +12,18 @@ metadata:
     - title: Blackduck Website
       url: https://github.com/deepan10/backstage-plugin-blackduck  
   annotations:
-    # flowsource/azure-project-name: SPE - Flowsource-Implementation
-    # flowsource/azure-repo-name: rajyalakshmi_flowsource_repo
-    # flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
+    flowsource/azure-project-name: SPE - Flowsource-Implementation
+    #flowsource/azure-repo-name: rajyalakshmi_flowsource_repo
+    flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
     backstage.io/techdocs-ref: dir:.
     # cognizant/checkmarx-project-id: CAC_automationenginewindows_v4.3.1-latest
-    # flowsource/sonarqube-project-key: 
-    # flowsource/azure-pipelines: Infra_Automation
+    flowsource/sonarqube-project-key: My-SpringBoot-App
+    flowsource/azure-pipelines: Infra_Automation
     flowsource/servicenow-configuration-item: ANNIE-IBM
     # flowsource/jenkins-pipelines: demo-pipeline
     # flowsource/jenkins-pipelines-trigger: demo-pipeline
-    # flowsource/jenkins-pipelines: pipeline-Rajyalakshmi
-    # flowsource/jenkins-pipelines-trigger: pipeline-Rajyalakshmi
+    flowsource/jenkins-pipelines: Flowsource-demo-pipeline,Test - pipeline
+    flowsource/jenkins-pipelines-trigger: Flowsource-demo-pipeline,Test - pipeline
     flowsource/github-repo-owner : Rajyalakshmi-2606
     flowsource/github-repo-name: flowsorce-app
     flowsource/github-host: github.com
