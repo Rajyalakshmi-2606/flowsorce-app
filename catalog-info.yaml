@@ -42,7 +42,7 @@ metadata:
 spec:
   type: service
   system: flowsource-demo
-  owner: group
+  owner: group:default-group
   lifecycle: Development
   dependsOn:
     - component:default/Payment-App-Gateway-System
@@ -59,7 +59,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: database
-  owner: group
+  owner: group:default-group
   system: flowsource-demo
 ---
 apiVersion: backstage.io/v1alpha1
@@ -72,7 +72,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: Development
-  owner: group
+  owner: group:default-group
   system: flowsource-demo
   definition:
     $text: './api-info.yaml'
