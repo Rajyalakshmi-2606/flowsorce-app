@@ -72,7 +72,30 @@ metadata:
 spec:
   type: openapi
   lifecycle: Development
-  owner: group:default-group
+  owner: group:default/default-group
   system: flowsource-demo
   definition:
     $text: './api-info.yaml'
+---
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: catalog-admin
+spec:
+  type: team
+  children: []
+  members:
+    - rajyalakshmi
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: rajyalakshmi
+  annotations:
+    cognito/user-id: rajyalakshmi
+spec:
+  profile:
+    email: Rajyalakshmi.pudi@cognizant.com
+  memberOf:
+    - catalog-admin
