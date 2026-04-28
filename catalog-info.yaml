@@ -76,20 +76,3 @@ spec:
   system: flowsource-demo
   definition:
     $text: './api-info.yaml'
-
- ---
- ---
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: catalog-admin
-  namespace: default
-  description: Catalog administrators
-spec:
-  type: team
-  profile:
-    displayName: Catalog Admin
-  children: []
-  members:
-    - Rajyalakshmi
----
