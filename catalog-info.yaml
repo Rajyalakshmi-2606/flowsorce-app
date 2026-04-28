@@ -1,4 +1,27 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: flowsource-demo
+  description: Flowsource demo system
+  namespace: default
+spec:
+  owner: group:default/default-group
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: default-group
+  namespace: default
+  description: Default group for Flowsource
+spec:
+  type: team
+  profile:
+    displayName: Default Group
+  children: []
+  members:
+    - Rajyalakshmi
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "Flowsource-Payment-App-demo"
