@@ -112,4 +112,4 @@ kind: System
 metadata:
   name: flowsource-demo
 spec:
-  owner: group: default/default-group
+  owner: group:default/default-group
