@@ -1,1 +1,93 @@
 
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: flowsource-demo
+  namespace: default
+  description: Flowsource demo system
+spec:
+  owner: group:default/default-group
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: default-group
+  namespace: default
+  description: Default group for Flowsource
+spec:
+  type: team
+  profile:
+    displayName: Default Group
+  children: []
+  members:
+    - Rajyalakshmi
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Flowsource-Payment-App-demo
+  namespace: default
+  description: |
+    The customer authorises payment via an online form allowing the business to automatically collect the funds when due. The business' bank and the customer's bank communicate and action the payment request when the payment is due, ensuring the correct amount is debited from the customer and credited to the business.
+  links:
+    - title: Documentation
+      url: https://backstage.io/docs
+    - title: Backstage Website
+      url: https://backstage.io/
+    - title: Blackduck Website
+      url: https://github.com/deepan10/backstage-plugin-blackduck
+  annotations:
+    flowsource/azure-project-name: SPE - Flowsource-Implementation
+    flowsource/azure-devops-project-key: SPE - Flowsource-Implementation
+    backstage.io/techdocs-ref: dir:.
+    flowsource/sonarqube-project-key: My-SpringBoot-App
+    flowsource/azure-pipelines: Infra_Automation
+    flowsource/servicenow-configuration-item: ANNIE-IBM
+    flowsource/jenkins-pipelines: Flowsource-demo-pipeline,Test - pipeline
+    flowsource/jenkins-pipelines-trigger: Flowsource-demo-pipeline,Test - pipeline
+    flowsource/github-repo-owner: Rajyalakshmi-2606
+    flowsource/github-repo-name: flowsorce-app
+    flowsource/github-host: github.com
+    flowsource/veracode-app-name: dummy
+  tags:
+    - payment
+    - transcation
+spec:
+  type: service
+  system: flowsource-demo
+  owner: group:default/default-group
+  lifecycle: development
+  dependsOn:
+    - component:default/payment-app-gateway-system
+    - resource:default/payment-app-user-database1
+  providesApis:
+    - payment-app-gateway-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: payment-app-user-database1
+  namespace: default
+  description: Database for storing the details
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: database
+  owner: group:default/default-group
+  system: flowsource-demo
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: payment-app-gateway-system
+  namespace: default
+  description: The repository contains the BSPlugins integrating the different channels (Web, Skype for business, Cortana, WebEx Teams, MS Teams, Twilio & Custom Channels) into HiveCenter Chatops Engine. The interface provides single endpoint for tapping into the features offered part of the I&O automation platform.
+  tags:
+    - node
+spec:
+  type: openapi
+  lifecycle: development
+  owner: group:default/default-group
+  system: flowsource-demo
+  definition:
+    $text: './api-info.yaml'
