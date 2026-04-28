@@ -72,11 +72,18 @@ metadata:
 spec:
   type: openapi
   lifecycle: Development
-  owner: group:default/default-group
+  owner: group:default-group
   system: flowsource-demo
   definition:
     $text: './api-info.yaml'
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: default-group
+spec:
+  type: team
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
