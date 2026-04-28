@@ -45,7 +45,7 @@ spec:
   owner: group:default/default-group
   lifecycle: Development
   dependsOn:
-    - component:default/Payment-App-Gateway-System
+    - api:default/Payment-App-Gateway-System
     - resource:default/Payment-App-User-Database1
   providesApis:
     - Payment-App-Gateway-System
