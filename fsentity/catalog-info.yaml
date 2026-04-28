@@ -1,34 +1,42 @@
-
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: flowsource-demo
-  namespace: default
-  description: Flowsource demo system
-spec:
-  owner: group:default/default-group
----
+################################################################################
+# GROUP
+################################################################################
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: default-group
-  namespace: default
-  description: Default group for Flowsource
+  description: Default owning group
 spec:
   type: team
   profile:
     displayName: Default Group
   children: []
-  members:
-    - Rajyalakshmi
+
 ---
+################################################################################
+# SYSTEM
+################################################################################
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: flowsource-demo
+  description: Flowsource Demo System
+spec:
+  owner: group:default/default-group
+
+---
+################################################################################
+# COMPONENT – MAIN SERVICE
+################################################################################
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Flowsource-Payment-App-demo
-  namespace: default
+  name: flowsource-payment-app-demo   # ✅ lowercase (important)
   description: |
-    The customer authorises payment via an online form allowing the business to automatically collect the funds when due. The business' bank and the customer's bank communicate and action the payment request when the payment is due, ensuring the correct amount is debited from the customer and credited to the business.
+    The customer authorises payment via an online form allowing the business to automatically
+    collect the funds when due. The business' bank and the customer's bank communicate and
+    action the payment request when the payment is due, ensuring the correct amount is debited
+    from the customer and credited to the business.
   links:
     - title: Documentation
       url: https://backstage.io/docs
@@ -54,20 +62,25 @@ metadata:
     - transcation
 spec:
   type: service
-  system: flowsource-demo
-  owner: group:default/default-group
   lifecycle: development
+  owner: group:default/default-group
+  system: flowsource-demo
   dependsOn:
-    - component:default/payment-app-gateway-system
+    # ✅ FIXED: API referenced as api:, not component:
+    - api:default/payment-app-gateway-system
     - resource:default/payment-app-user-database1
   providesApis:
+    # ✅ FIXED: lowercase + matches API name exactly
     - payment-app-gateway-system
+
 ---
+################################################################################
+# RESOURCE – DATABASE
+################################################################################
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: payment-app-user-database1
-  namespace: default
+  name: payment-app-user-database1   # ✅ lowercase
   description: Database for storing the details
   annotations:
     backstage.io/techdocs-ref: dir:.
@@ -75,13 +88,20 @@ spec:
   type: database
   owner: group:default/default-group
   system: flowsource-demo
+
 ---
+################################################################################
+# API
+################################################################################
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: payment-app-gateway-system
-  namespace: default
-  description: The repository contains the BSPlugins integrating the different channels (Web, Skype for business, Cortana, WebEx Teams, MS Teams, Twilio & Custom Channels) into HiveCenter Chatops Engine. The interface provides single endpoint for tapping into the features offered part of the I&O automation platform.
+  name: payment-app-gateway-system   # ✅ lowercase
+  description: |
+    The repository contains the BSPlugins integrating the different channels
+    (Web, Skype for Business, Cortana, WebEx Teams, MS Teams, Twilio & Custom Channels)
+    into HiveCenter ChatOps Engine. The interface provides a single endpoint for
+    tapping into the features offered as part of the I&O automation platform.
   tags:
     - node
 spec:
@@ -90,4 +110,4 @@ spec:
   owner: group:default/default-group
   system: flowsource-demo
   definition:
-    $text: './api-info.yaml'
+    $text: ./api-info.yaml
