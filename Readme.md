@@ -14,6 +14,6 @@ This folder (`flowsource-pdlc`) contains the PDLC plugin skeleton, which is esse
    - After copying, Flowsource Core will recognize and utilize the PDLC plugin for your workflows.
 
 ## Notes
-- Make sure to keep this skeleton updated to benefit from new features and improvement.
+- Make sure to keep this skeleton updated to benefit from new features and improvements.
 
 ---
