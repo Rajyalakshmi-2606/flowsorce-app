@@ -91,3 +91,20 @@ spec:
   members:
     - Rajyalakshmi
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: default-group
+  namespace: default
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: flowsource-demo
+  namespace: default
+  description: Flowsource Demo System
+spec:
+  owner: group:default-group
