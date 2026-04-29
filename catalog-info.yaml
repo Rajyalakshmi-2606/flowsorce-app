@@ -42,10 +42,10 @@ metadata:
 spec:
   type: service
   system: flowsource-demo
-  owner: group:default/default-group
+  owner: group:default-group
   lifecycle: Development
   dependsOn:
-    - api:default/Payment-App-Gateway-System
+    - component:default/Payment-App-Gateway-System
     - resource:default/Payment-App-User-Database1
   providesApis:
     - Payment-App-Gateway-System
@@ -59,7 +59,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 spec:
   type: database
-  owner: group:default/default-group
+  owner: group:default-group
   system: flowsource-demo
 ---
 apiVersion: backstage.io/v1alpha1
@@ -72,44 +72,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: Development
-  owner: group:default/default-group
+  owner: group:default-group
   system: flowsource-demo
   definition:
     $text: './api-info.yaml'
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: default-group
-spec:
-  type: team
-  children: []
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: catalog-admin
-spec:
-  type: team
-  children: []
-  members:
-    - rajyalakshmi
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: rajyalakshmi
-  annotations:
-    cognito/user-id: rajyalakshmi
-spec:
-  profile:
-    email: Rajyalakshmi.pudi@cognizant.com
-  memberOf:
-    - catalog-admin
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: flowsource-demo
-spec:
-  owner: group:default/default-group
