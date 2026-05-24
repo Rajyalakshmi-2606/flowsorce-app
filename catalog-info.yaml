@@ -22,8 +22,8 @@ metadata:
     flowsource/servicenow-configuration-item: ANNIE-IBM
     # flowsource/jenkins-pipelines: demo-pipeline
     # flowsource/jenkins-pipelines-trigger: demo-pipeline
-    flowsource/jenkins-pipelines: Flowsource-demo-pipeline,
-    flowsource/jenkins-pipelines-trigger: Flowsource-demo-pipeline,
+    flowsource/jenkins-pipelines: Flowsource-demo-pipeline, Test - pipeline
+    flowsource/jenkins-pipelines-trigger: Flowsource-demo-pipeline, Test - pipeline
     flowsource/github-repo-owner : Rajyalakshmi-2606
     flowsource/github-repo-name: flowsorce-app
     flowsource/github-host: github.com
