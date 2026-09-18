@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "example component"
+  description: An example of a Backstage application.
+  links:
+    - title: Documentation
+      url: https://backstage.io/docs
+    - title: Backstage Website
+      url: https://backstage.io/
+  annotations:
+    newrelic.io/application-id: "1544571677"
+    newrelic.io/account-id: "8442003"
+    flowsource/github-repo-owner: Cognizant-NeuroAI-Implementation
+    flowsource/github-repo-name: ai-studio-fs107
+    flowsource/github-host: github.com
+  tags:
+    - website
+spec:
+  type: service
+  system: flowsource-demo
+  owner: user:development/guest
+  lifecycle: Development
